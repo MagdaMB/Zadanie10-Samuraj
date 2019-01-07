@@ -1,10 +1,13 @@
-const add = (start = 0) => {
-    let number = start;
-    return () => {
-        number++;
-        document.body.textContent = number;
+const user = () => {
+    let userName = "Mirek";
+    let userAge = 16;
+
+    function showName() {
+        console.log(`czesć jestem ${userName}, ${userAge > 18 ? 'mozesz kupic piwo' : 'niemozesz kupic piwa'}`);
     }
+    return showName;
 }
 
-const counter = add();
-document.addEventListener('click', counter)
+const mirek = user();
+
+mirek();
